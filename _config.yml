@@ -22,7 +22,7 @@ title: James Duong
 email: james.duong93@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jamespduong.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: jamesphongduong
 linkedin_username: james-duong-9168a89a
 # Build settings
