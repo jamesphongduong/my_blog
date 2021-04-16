@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Scalability - Horizontal vs Vertical Scaling"
+date: 2021-04-06 10:00:18 +1000
+categories: jekyll update
+---
+
+Scalability in system design looks at how we handle increased demand by adding additional resources to our current system. We can scale horizontally and/or vertically.
+
+_Horizontal scaling_ is when you add more nodes to your system.
+
+![horizontal scaling diagram](/images/hoz_scaling.svg)
+
+_Vertical scaling_ is when you increase the ability of a single node, usually upgrading the amount of CPUs, memory or storage.
+
+![vertical scaling diagram](/images/vert_scaling.svg)
+
+### Comparison
+
+| Horizontal                                               | Vertical                             |
+| -------------------------------------------------------- | ------------------------------------ |
+| - Load balancer required                                 | - N/A                                |
+| - Resilient - load balancer can reroute failing requests | - Single point of failure            |
+| - Remote Procedure Calls (slow)                          | - Inter process communication (fast) |
+| - Data inconsistency                                     | - Consistent data                    |
+| - Scales well                                            | - Hardware limitations               |
+| - Cost increases exponentially)                          | - Cost increases linearly            |
+
+### In Practice
+
+The best scalabilty system would be a hybrid implementation, taking pros from both techniques.
+
+Starting off, it would make sense to initially scale vertically (due to simplicity and cost), and then eventually scale horizontally (once demand reaches X amount).
