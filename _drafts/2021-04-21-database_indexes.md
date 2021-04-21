@@ -1,21 +1,13 @@
 ---
 layout: post
-title: "Scalability - Horizontal vs Vertical Scaling"
-date: 2021-04-16 10:00:18 +1000
+title: Database Indexes
+date: 2021-04-21 10:00:18 +1000
 categories: tech
 ---
 
-Scalability in system design looks at how we handle increased demand by adding additional resources to our current system. We can scale horizontally and/or vertically.
+Database indexes are an optimization technique to improve the speed of database queries. It is the same concept of having a phone book that is sorted alphabetically by the person's name with tabs. If you wanted to look for all the phone records belonging to a John Smith, you would first go to the J tab, and then start your search from there. Now if the phone book was not sorted and had no tabs, doing the same search would require you to look at every individual record from start to finish. This is known as a _full table scan_ (in SQL).
 
-_Horizontal scaling_ is when you add more nodes to your system.
-
-![horizontal scaling diagram](/images/hoz_scaling.svg)
-
-_Vertical scaling_ is when you increase the resources of a single node, usually upgrading the amount of CPUs, memory or storage.
-
-![vertical scaling diagram](/images/vert_scaling.svg)
-
-### Comparison
+Visualisation
 
 | Horizontal                                               | Vertical                             |
 | -------------------------------------------------------- | ------------------------------------ |
@@ -25,9 +17,3 @@ _Vertical scaling_ is when you increase the resources of a single node, usually 
 | - Data inconsistency                                     | - Consistent data                    |
 | - Scales well                                            | - Hardware limitations               |
 | - Cost increases exponentially                           | - Cost increases linearly            |
-
-### In Practice
-
-The best system for scale would be a hybrid implementation, taking pros from both.
-
-Starting off, it would make sense to initially scale vertically, (due to simplicity and cost) and then scale horizontally. (once required)

@@ -1,5 +1,12 @@
+---
+layout: post
+title: Binary Search
+date: 2021-04-21 10:00:18 +1000
+categories: tech
+---
+
 A binary search is a search algorithm used to find the position of a target
-value in a sorted list and has a Big O Notation of `O(log n)`. The algorithm
+value in a _sorted_ list and has a Big O Notation of `O(log n)`. The algorithm
 repetitively halves the list until the target value is acquired.
 
 ### Example
