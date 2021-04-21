@@ -27,7 +27,8 @@ github_username: jamespduong
 linkedin_username: james-duong-9168a89a
 # Build settings
 theme: minima
-# plugins:
+plugins:
+  - jekyll-seo-tag
 # - jekyll-feed
 # Exclude from processing.
 # The following items will not be processed, by default.
