@@ -5,7 +5,7 @@ date: 2021-04-21 10:00:18 +1000
 categories: tech
 ---
 
-Webhooks are a technique used to allow you to "hook" into an external service's event and send automated messages when said event occurs.
+Webhooks are a technique used to allow you to "hook" into an external service's event and send automated messages when said event occurs.s
 
 ### How they work
 
