@@ -1,21 +1,35 @@
 ---
 layout: post
-title: Webhooks
+title: Database Partitioning
 date: 2021-04-21 10:00:18 +1000
 categories: tech
 ---
 
-Webhooks are a technique used to allow you to "hook" into an external service's event and send automated messages when said event occurs.
+Database partitioning is done to improve maintenance and performance
+optimization. There are two ways to partition your database:
 
-### Webhooks vs Polling
+1. Vertical Partitioning
+2. Horizontal Partitioning
 
-Imagine if you wanted to buy a specific MacBook model from the Apple website, and wanted to know when it went on sale. One method of doing so would be to checking the Apple website everyday. 
-This manual process of having to constantly check for updates is known as _polling_.
+### Horizontal Partitioning
 
-What would be nice is if Apple, gave us the option to subscribe to the sale event of this specific MacBook model. And once this "sale event" occurs, then please notify me. 
-This method is known as a _webhook_.
+Horizontal partitioning involves _row splitting_ where you choose a _partition
+key_ to determine how your data is split. In this example we split the rows
+based off the country.
 
-### Benefits 
-- Resource efficiency - polling is an expensive process as you are constantly checking for updates and the majority of the time you are fetching data that hasn't changed, whereas webhooks are only executed when required
-- Latest data - polling doesn't guarantee up-to-date data as data fetching occurs in intervals, whereas webhooks does
+#### Before
 
+#### After
+
+#### Benefits
+
+- Improved query read times due to a smaller sized tables
+- Writes to tables won't cause locks other tables
+
+### Vertical Partitioning
+
+- - Writes to tables won't cause locks other tables
+
+#### Before
+
+#### After
