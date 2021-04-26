@@ -23,18 +23,27 @@ faster and this was made possible by having sorted data, the key ingredient to
 database indexes.
 
 <br/>
+
 ### Technical Explanation
-Database indexes are a _sorted_ data structure and optimisation techique used to improve the speed of database queries at the cost of slower data writes. With database indexes, we are able to query data in  _logarithmic_ time, as opposed to _linear_ time.
+
+Database indexes are a _sorted_ data structure and optimisation techique used to
+improve the speed of database queries at the cost of slower data writes. With
+database indexes, we are able to query data in _logarithmic_ time, as opposed to
+_linear_ time.
 
 <br/>
+
 ### Clustered Indexes and Non-Clustered Indexes
-Non-Clustered Index: Makes a copy of the indexed column and uses a lookup to the actual data. Requires additional writes and storage space. (notebook example)
+
+Non-Clustered Index: Makes a copy of the indexed column and uses a lookup to the
+actual data. Requires additional writes and storage space. (notebook example)
 
 Clustered Indexes: The data itself is sorted when stored (which means there can
 only be one clustered index). Does not require additional storage space. (laptop
 example)
 
 <br/>
+
 ### Types of Scans
 
 1. Sequential Scan: Scans entire table - slow
@@ -45,7 +54,10 @@ example)
    queries), then looks up relevant pages
 
 <br/>
+
 ### Best Practices
+
 - Create indexes on highly selected columns
-- Be aware of implications of updates & deletes on indexed columns - these are more expensive!
+- Be aware of implications of updates & deletes on indexed columns - these are
+  more expensive!
 - Don't over-optimise early as indexes are expensive
