@@ -5,7 +5,7 @@ date: 2021-04-26 10:00:18 +1000
 categories: tech
 ---
 
-### ELI5
+# ELI5
 
 Imagine if you had a notebook full of lecture notes, and you wanted to organise
 your notes alphabetically by the topic so each time you wanted to reference a
@@ -22,18 +22,14 @@ With both of these techniques, we are able to able to navigate to a topic much
 faster and this was made possible by having sorted data, the key ingredient to
 database indexes.
 
-<br/>
-
-### Technical Explanation
+# Technical Explanation
 
 Database indexes are a _sorted_ data structure and optimisation techique used to
 improve the speed of database queries at the cost of slower data writes. With
 database indexes, we are able to query data in _logarithmic_ time, as opposed to
 _linear_ time.
 
-<br/>
-
-### Clustered Indexes and Non-Clustered Indexes
+# Clustered Indexes and Non-Clustered Indexes
 
 Non-Clustered Index: Makes a copy of the indexed column and uses a lookup to the
 actual data. Requires additional writes and storage space. (notebook example)
@@ -42,9 +38,7 @@ Clustered Indexes: The data itself is sorted when stored (which means there can
 only be one clustered index). Does not require additional storage space. (laptop
 example)
 
-<br/>
-
-### Types of Scans
+# Types of Scans
 
 1. Sequential Scan: Scans entire table - slow
 2. Index Scan: Scans rows within index, then lookups in heap
@@ -53,9 +47,7 @@ example)
 4. Bitmap Heap Scan: Scans index to build bitmaps for pages (for AND / OR
    queries), then looks up relevant pages
 
-<br/>
-
-### Best Practices
+# Best Practices
 
 - Create indexes on highly selected columns
 - Be aware of implications of updates & deletes on indexed columns - these are

@@ -15,7 +15,7 @@ _Vertical scaling_ is when you increase the resources of a single node, usually 
 
 ![vertical scaling diagram](/images/vert_scaling.svg)
 
-### Comparison
+# Comparison
 
 | Horizontal                                               | Vertical                             |
 | -------------------------------------------------------- | ------------------------------------ |
@@ -26,7 +26,7 @@ _Vertical scaling_ is when you increase the resources of a single node, usually 
 | - Scales well                                            | - Hardware limitations               |
 | - Cost increases exponentially                           | - Cost increases linearly            |
 
-### In Practice
+# In Practice
 
 The best system for scale would be a hybrid implementation, taking pros from both.
 

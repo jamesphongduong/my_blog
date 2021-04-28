@@ -9,7 +9,7 @@ A binary search is a search algorithm used to find the position of a target
 value in a _sorted_ list and has a Big O Notation of `O(log n)`. The algorithm
 repetitively halves the list until the target value is acquired.
 
-### Example
+# Example
 
 Let's imagine we are looking at a sorted list of 8 numbers and we are looking
 for the number 7. (worse case scenario in terms of effort required)
