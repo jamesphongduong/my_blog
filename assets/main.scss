@@ -4,6 +4,8 @@
 
 @import "minima";
 
+$light-gray: #f9f9f9;
+
 .site-header, .site-footer {
-    background-color: green;
+    background-color: $light-gray;
 }
