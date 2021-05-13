@@ -5,7 +5,21 @@
 @import "minima";
 
 $light-gray: #f9f9f9;
+$gray: #C8C8C8;
 
 .site-header, .site-footer {
     background-color: $light-gray;
+}
+
+
+.container__image {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+    border: 2px double $gray;
+    & > em {
+        font-size: 80%
+    }
 }
